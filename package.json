@@ -1,0 +1,19 @@
+{
+  "name": "fubaomall",
+  "version": "1.0.0",
+  "description": "substitute pages of shopping mall",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lollipop7/fubaomall.git"
+  },
+  "author": "lollipop7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lollipop7/fubaomall/issues"
+  },
+  "homepage": "https://github.com/lollipop7/fubaomall#readme"
+}
