@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>福宝商城
-        <%= data.filename %>
+    <title>福宝商城-
+        <% for(var i=0, len=dataJSON.topBarData.length; i<len; i++) { %>
+            <% if(dataJSON.topBarData[i].key == dataJSON.filename){ %>
+                <%= dataJSON.topBarData[i].name %>
+            <% } %>    
+        <% } %> 
     </title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
 </head>
