@@ -1,0 +1,23 @@
+{
+  "name": "fubaomall",
+  "description": "substitute pages of shopping mall",
+  "main": "index.js",
+  "authors": [
+    "lollipop7"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lollipop7/fubaomall",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v3.3.7",
+    "jquery": "1.12.4",
+    "normalize.css": "^8.0.0"
+  }
+}

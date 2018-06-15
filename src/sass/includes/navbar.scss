@@ -1,0 +1,18 @@
+.navbar {
+    margin-bottom: 0;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #f6f6f6;  
+    behavior: url(PIE.htc);
+} 
+.navbar-brand {
+    padding: 11px 15px;
+    img {
+        height: 78px;
+    }
+}
+.navbar-text {
+    line-height: 70px;
+    font-size: 22px;
+    color: #333;
+}
