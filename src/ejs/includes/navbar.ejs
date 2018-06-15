@@ -1,0 +1,16 @@
+<nav class="navbar navbar-static-top">
+    <div class="container"> 
+        <div class="navbar-header">
+            <a href="javascript:viod(0)" class="navbar-brand">
+                <img src="../images/fubao-logo.png" alt="logo">
+            </a>
+        </div>
+        <p class="navbar-text navbar-left">
+                <% for(var i=0, len=dataJSON.topBarData.length; i<len; i++) { %>
+                    <% if(dataJSON.topBarData[i].key == dataJSON.filename){ %>
+                        <%= dataJSON.topBarData[i].name %>
+                    <% } %>    
+                <% } %> 
+        </p> 
+    </div> 
+</nav>

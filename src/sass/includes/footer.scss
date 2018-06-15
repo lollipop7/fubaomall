@@ -1,0 +1,42 @@
+//Created by lollipop 2018/6/15
+  .footer-line {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    border: 1px solid #e1e1e1;
+  }
+  .footer-menu-item {
+    width: 20%;
+    float: left;
+    position: relative;
+    a {
+      font-size: 16px;
+      font-weight: 700;
+      padding: 3px 20px;
+      color: #656565;
+    }
+    .dropdown-menu {
+      display: block;
+      position: relative;
+      box-shadow: none;
+      top: auto;
+      background: none;
+      border: none;
+      &>li>a {
+        font-size: 14px;
+        color: #656565;
+      }
+    }
+  }
+  //@media (max-width: 767px) {
+  //  .footer-menu-item {
+  //    width: 100%;
+  //    .dropdown-menu {
+  //      display: none;
+  //    }
+  //  }
+  //}
+  //@media (min-width: 768px) {
+  //  .footer-menu-item {
+  //    width: 20%;
+  //  }
+  //}

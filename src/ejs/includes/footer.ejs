@@ -1,3 +1,24 @@
-<div class="footer">
-    
+<div class="container">
+    <div class="row">
+        <hr class="footer-line">
+        <ul class="menu-footer-menu clearfix">
+           <% for(var i=0;i<dataJSON.footerData.length;i++){ %>
+                <li class="footer-menu-item">
+                    <a href="javascript:void(0)" title="<%= dataJSON.footerData[i].type %>">
+                        <%= dataJSON.footerData[i].type %>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <% for(var j=0;j<dataJSON.footerData[i].list.length;j++){ %>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)" title="<%= dataJSON.footerData[i].list[j] %>">
+                                    <%= dataJSON.footerData[i].list[j] %>
+                                </a>
+                            </li>
+                        <% } %>
+                    </ul>
+
+                </li>
+           <% } %>
+        </ul>
+    </div>
 </div>
