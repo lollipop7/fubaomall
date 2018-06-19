@@ -31,40 +31,22 @@
     hr {
         margin-top: 10px;
     }
-}
-.action-button {
-    padding: 12px 0;
-    font-size: 16px;
-    background-color: #ff4301;
-    border-radius: 10px;
-    color: #fff;
-    border: none;
-    outline: none;
-    &.full-width { 
-        width: 100%;
-    }
-    &:hover { 
-        background-color: #D50403;
-    }
-    &:focus {
-        background-color: #D50403;
-    }
-}
-.form-group {
-    &.has-err {
-        position: relative; 
-        .form-control.err {
-            border: 1px solid #ff4301;
-        }
-        .help-block {
-            display: block;
-            font-size: 12px;
-            color: #ff4301; 
+    .form-group {
+        &.has-err {
+            position: relative; 
+            .form-control.err {
+                border: 1px solid #ff4301;
+            }
+            .help-block {
+                display: block;
+                font-size: 12px;
+                color: #ff4301; 
+            }
         }
     }
-}
-.form-control {
-    height: auto;
-    padding: 10px 20px;  
-    font-size: 14px;
+    .form-control {
+        height: auto;
+        padding: 10px 20px;  
+        font-size: 14px;
+    }
 }

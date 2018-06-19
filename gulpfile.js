@@ -36,7 +36,7 @@ gulp.task('sass', () => {
     fileArray.forEach(ejsFileName => {
         return gulp.src(join(sassDir, `${ejsFileName}/${ejsFileName}.scss`))
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error',sass.logError))
+        .pipe(sass().on('error',sass.logError))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(join(wwwDir, 'styles/')));
