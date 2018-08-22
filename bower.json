@@ -19,5 +19,8 @@
     "bootstrap": "v3.3.7",
     "jquery": "1.12.4",
     "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "bootstrap-select": "^1.13.1"
   }
 }

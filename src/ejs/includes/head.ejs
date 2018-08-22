@@ -11,5 +11,8 @@
         <% } %> 
     </title>
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <% if(dataJSON.filename == 'integral' || 'payoffCredit' || 'transferToAlipay'){ %>
+        <link rel="stylesheet" href="./styles/bootstrap-select.min.css">
+    <% } %>
     <link rel="stylesheet" href="./styles/<%= dataJSON.filename %>.css">
 </head>

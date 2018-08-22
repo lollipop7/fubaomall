@@ -6,7 +6,11 @@
     <title>福宝商城-
         
             
-                积分查询
+                我的积分
+                
+        
+                
+        
                 
         
                 
@@ -19,8 +23,12 @@
          
     </title>
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="./styles/bootstrap-select.min.css">
+    
     <link rel="stylesheet" href="./styles/integral.css">
 </head>
+
 <body>
     <nav class="navbar navbar-static-top">
     <div class="container"> 
@@ -32,7 +40,11 @@
         <p class="navbar-text navbar-left">
                 
                     
-                        积分查询
+                        我的积分
+                        
+                
+                        
+                
                         
                 
                         
@@ -48,66 +60,83 @@
 </nav>
     <div class="my-intrgral">
     <div class="container"> 
-        <h3>我的积分</h3>
-        <div class="score-panel col-centered">
-            <p>您当前的积分</p>
-            <p class="score">476.00</p>
-            <input class='btn action-button full-width' type="button" value='积分兑换'>
+        <div class="score-panel clearfix">
+            <div class="pull-left">
+                <p>
+                    <span>您当前的积分</span>
+                    <i class="icon-Exclamation"></i>
+                </p>
+                <p class="score">476.00</p>
+            </div>
+            <div class="pull-right">
+                <button type="button" class="btn btn-fubao">转入支付宝</button>
+                <button type="button" class="btn btn-fubao">信用卡还款</button>
+            </div>
         </div>
-        <div class="control-panel">
-            <select name="" id="" class='input-control'>
-                <option value="one">近三个月</option>
-            </select>
-            <select name="" id="" class='input-control'>
-                <option value="one">全部交易</option>
-            </select>
+        <div class="control-panel clearfix">
+            <div class="pull-left">
+                <h3>历史交易详情</h3>
+            </div>
+            <div class="pull-right">
+                <select class="selectpicker input-control">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Barbecue</option>
+                </select>
+                <select class="selectpicker input-control">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Barbecue</option>
+                </select>
+            </div>
+            
         </div>
         <div class="table-responsive">
-            <table class="table table-hover">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>交易号</th>
                         <th>交易时间</th>
                         <th>数量（积分）</th>
                         <th>交易项目</th>
-                        <th>操作</th>
+                        <th>状态</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>CZ9130481412</td>
                         <td>2018-06-24 19:58</td>
-                        <td>+300.00</td>
+                        <td><span class="contrast increase">+300.00</span></td>
                         <td>充值</td>
                         <td>
-                            <a href="">查看明细</a>
+                            <span class="state succ">交易成功</span>
                         </td>
                     </tr>
                     <tr>
                         <td>CZ9130481412</td>
                         <td>2018-06-24 19:58</td>
-                        <td>+300.00</td>
+                        <td><span class="contrast decrease">-300.00</span></td>
                         <td>充值</td>
                         <td>
-                            <a href="">查看明细</a>
+                            <span class="state fail">交易失败</span>
                         </td>
                     </tr>
                     <tr>
                         <td>CZ9130481412</td>
                         <td>2018-06-24 19:58</td>
-                        <td>+300.00</td>
+                        <td><span class="contrast increase">+300.00</span></td>
                         <td>充值</td>
                         <td>
-                            <a href="">查看明细</a>
+                            <span class="state succ">交易成功</span>
                         </td>
                     </tr>
                     <tr>
                         <td>CZ9130481412</td>
                         <td>2018-06-24 19:58</td>
-                        <td>+300.00</td>
+                        <td><span class="contrast increase">+300.00</span></td>
                         <td>充值</td>
                         <td>
-                            <a href="">查看明细</a>
+                            <span class="state succ">交易成功</span>
                         </td>
                     </tr>
                 </tbody>
@@ -133,7 +162,6 @@
             </ul>                                                                                       
         </nav>
     </div>
-    
 </div>
     <div class="container">
     <div class="row">
@@ -253,10 +281,14 @@
         </ul>
     </div>
 </div>
-
+ 
     <!-- jquery.min.js -->
 <script src='./js/jquery.min.js'></script>
 <!-- 3.3.7 -->
 <script src='./js/bootstrap.min.js'></script>
+    <script src='./js/bootstrap-select.min.js'></script>
+    <script type="text/javascript">
+        $('.selectpicker').selectpicker();
+    </script>
 </body>
 </html>

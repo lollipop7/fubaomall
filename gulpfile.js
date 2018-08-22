@@ -12,7 +12,7 @@ const fs = require('fs'),
     wwwDir = join(srcDir, 'www'),
     _ = require('lodash');
 
-let fileArray = ['login','register','resetPWD','setPWD','integral'];
+let fileArray = ['login','register','resetPWD','setPWD','integral', 'payoffCredit', 'transferToAlipay'];
 gulp.task('tpl',()=>{
     _.each(fileArray, ejsFileName => {
         let templateStr = fs.readFileSync(join(ejsDir, `${ejsFileName}/${ejsFileName}.ejs`), 'utf-8'),

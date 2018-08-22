@@ -1,37 +1,74 @@
 .my-intrgral {
     padding-top: 40px;
-    h3 {
-        padding-left: 20px;
-        height: 40px;
-        line-height: 40px;
-        background-color: #f5f5f5;
-        color: #333;
-        font-size: 14px;
-    }  
     .score-panel {
-        padding: 60px 0; 
-        width: 260px;
-        text-align: center;
+        padding: 35px 20px; 
+        border: 1px solid #ededed;
+        background: #fafafa;
         p {
             color: #656565;
             font-size: 14px;
         }
         .score {
-            margin: 4px 0 20px;
-            color: #333;
+            color: #ff4300;
             font-size: 36px;
             line-height: 46px; 
         }
+        .btn-fubao {
+            margin-left: 10px;
+            padding: 10px 25px;
+            color: #ff4301;
+            background-color: transparent;
+            border-color: #ff4300;
+            border-radius: 8px;   
+            outline: none;
+        }
     }
     .control-panel {
+        margin-top: 60px; 
         margin-bottom: 20px;
+        h3 {
+            padding-left: 10px;
+            font-size: 18px;
+            border-left: 4px solid #ff4300;
+        }
         .input-control {
-            border-radius: 5px;
-            margin-right: 10px; 
+            width: 160px !important;
+            margin-left: 10px;
+        }
+        .bootstrap-select .dropdown-toggle:focus {
+            outline: none !important;
+        }
+        .btn {
+            padding: 10px 20px;
+        }
+        .bootstrap-select>select {
+            left: 0;
+        }
+        .dropdown-menu>.active>a, 
+        .dropdown-menu>.active>a:focus, 
+        .dropdown-menu>.active>a:hover {
+            background-color: #ff4300;
         }
     }
     thead {
         background-color: #f5f5f5;
+        
+    }
+    .table>thead>tr>th {
+        font-weight: 900;
+        border-bottom: none;
+    }
+    .table>tbody>tr>td {
+        padding: 20px 8px;
+        border-top: none;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+        span.increase {
+            color: #ff4d45;
+        }
+        span.succ {
+            color: #ff4300;
+        }
     }
     .page-cyber {
         text-align: center; 
