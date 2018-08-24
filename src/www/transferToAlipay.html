@@ -59,69 +59,133 @@
     </div> 
 </nav>
     <div class="payoff-credit">
-        <div class="container">
-            <div class="crums-panel clearfix">
-                <div class="pull-left">
-                    <a href="javascript:void(0)">我的积分</a>&gt;<a href="javascript:void(0)">转入支付宝</a>
-                </div>
-                <div class="pull-right">
-                    剩余积分：<span class="grade">4762.00</span>
+    <div class="container">
+        <div class="crums-panel clearfix">
+            <div class="pull-left">
+                <a href="javascript:void(0)">我的积分</a>&gt;<a href="javascript:void(0)">转入支付宝</a>
+            </div>
+            <div class="pull-right">
+                剩余积分：<span class="grade">4762.00</span>
+            </div>
+        </div>
+        <div class="icon-payoff">
+            <img src="/images/9151jifen_icon.png" alt="" class="grade">
+            <img src="/images/arrow.png" alt="" class="arrow">
+            <img src="/images/alipay_icon.png" alt="" class="alipay">
+        </div>
+        <form class="form-horizontal form-panel">
+            <div class="form-group">
+                <label for="inputAccount" class="col-sm-2 control-label">支付宝账户</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputAccount" placeholder="支付宝账户/手机号码">
                 </div>
             </div>
-            <div class="icon-payoff">
-                <img src="/images/9151jifen_icon.png" alt="" class="grade">
-                <img src="/images/arrow.png" alt="" class="arrow">
-                <img src="/images/alipay_icon.png" alt="" class="alipay">
+            <div class="form-group">
+                <label for="inputPayee" class="col-sm-2 control-label">收款人姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputPayee" placeholder="收款人必须与支付宝真实姓名一致">
+                </div>
             </div>
-            <form class="form-horizontal form-panel">
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">支付宝账户</label>
-                    <div class="col-sm-10">
-                        <select class="selectpicker form-select">
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Barbecue</option>
-                        </select>
+            <div class="form-group">
+                <label for="transferMoney" class="col-sm-2 control-label">转入金额 (元)</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="transferMoney" placeholder="示例：248.35">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputRemark" class="col-sm-2 control-label">备注</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputRemark" placeholder="添加备注（50字以内）">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 我已阅读并同意<a href="javascript:void(0)" class="protocol">《9151福宝积分协议》</a>
+                    </label>
+                </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" 
+                        class="btn btn-fubao" 
+                        data-toggle="modal"
+                        data-target="#payoffModal"
+                    >确认转账</button>
+                    <div class="hint">
+                        不支持外币账单还款
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputCredit" class="col-sm-2 control-label">信用卡卡号</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputCredit" placeholder="请输入信用卡卡号">
-                    </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Modal confirm-->
+<div class="modal fade" id="payoffModal" tabindex="-1" role="dialog" aria-labelledby="payoffLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="payoffLabel">确认转入</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="useGrade">
+                <div class="elem-content">
+                    <h3>确认转账<span class='money'> 372.00 </span>个积分？</h3>
+                    <p class="grey">款项将实时转入该账户，无法退款</p>
                 </div>
-                <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">持卡人姓名</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputName" placeholder="请输入持卡人姓名">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputMoney" class="col-sm-2 control-label">还款金额 (元)</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputMoney" placeholder="请输入还款金额">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> 我已阅读并同意<a href="javascript:void(0)" class="protocol">《9151福宝积分协议》</a>
-                        </label>
-                    </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <input type="submit" class="btn btn-fubao" value="提交积分还款申请"/>
-                        <div class="hint">
-                                不支持外币账单还款
-                        </div>
-                    </div>
-                </div>
-            </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-fubao" id="confirm-btn">确定</button>
+                <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+            </div>
         </div>
     </div>
+</div>
+<!-- Modal succ-->
+<div class="modal fade" id="payoffSuccModal" tabindex="-1" role="dialog" aria-labelledby="payoffLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="payoffLabel">转入成功</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="useGrade">
+                <div class="elem-content">
+                    <img src='/images/success_icon.png' class='icon-succ' alt='申请成功'>
+                    <p>转账成功！</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-fubao" id="succ-btn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal fail-->
+<div class="modal fade" id="payoffFailModal" tabindex="-1" role="dialog" aria-labelledby="payoffLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="payoffLabel">转入失败</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="useGrade">
+                <div class="elem-content">
+                    <h3>转账失败</h3>
+                    <p>请检支付宝账号与收款人姓名是否填写有误</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-fubao" id="fail-btn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container">
     <div class="row">
         <hr class="footer-line">
@@ -246,8 +310,6 @@
 <!-- 3.3.7 -->
 <script src='./js/bootstrap.min.js'></script>
     <script src='./js/bootstrap-select.min.js'></script>
-    <script type="text/javascript">
-        $('.selectpicker').selectpicker();
-    </script>
+    <script src="./js/transferToAlipay.js"></script>
 </body>
 </html>

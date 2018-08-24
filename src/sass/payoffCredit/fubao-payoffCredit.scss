@@ -50,6 +50,9 @@
             color: #fff;
             font-size: 16px; 
             border-radius: 8px;
+            &:focus {
+                outline: none;
+            }
         }
         .hint {
             margin-top: 10px;

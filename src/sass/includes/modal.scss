@@ -1,0 +1,49 @@
+// modal
+.modal-dialog {
+    margin-top: 20%;
+    .modal-body {
+        padding-top: 40px;
+        text-align: center;
+        h3 {
+            font-size: 22px;
+        }
+        .money {
+            color: #ff4301;
+        }
+        .icon-succ {
+            width: 49px;
+            height: 49px;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            &.grey {
+                color: #a0a0a0;
+            }
+        }
+    }
+    .modal-footer {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        text-align: center; 
+        border-top: none;
+    }
+    .btn {
+        padding: 10px 64px;
+        border-radius: 8px;
+        &:focus {
+            outline: none;
+        }
+    }
+    .btn-fubao {
+        color: #fff;
+        background-color: #ff4301;
+        border-color: #ff4301;
+    }
+    .btn-cancel {
+        color: #ff4301;
+        background-color: #fff;
+        border-color: #ff4301;
+    }
+    
+}

@@ -87,7 +87,7 @@
             <div class="form-group">
                 <label for="inputCredit" class="col-sm-2 control-label">信用卡卡号</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputCredit" placeholder="请输入信用卡卡号">
+                    <input type="text" class="form-control" id="inputCredit" placeholder="请输入信用卡卡号" maxlength='23'>
                 </div>
             </div>
             <div class="form-group">
@@ -113,7 +113,11 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <input type="submit" class="btn btn-fubao" value="提交积分还款申请"/>
+                    <button type="button" 
+                        class="btn btn-fubao" 
+                        data-toggle="modal"
+                        data-target="#payoffModal"
+                    >提交积分还款申请</button>
                     <div class="hint">
                             不支持外币账单还款
                     </div>
@@ -121,7 +125,73 @@
             </div>
         </form>
     </div>
-</div> 
+</div>
+<!-- Modal confirm-->
+<div class="modal fade" id="payoffModal" tabindex="-1" role="dialog" aria-labelledby="payoffLabel">
+    
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="payoffLabel">确认还款</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="useGrade">
+                <div class="elem-content">
+                    <h3>使用<span class='money'> 372.00 </span>个积分给<span id='cardNum'>5656567612</span>信用卡还款</h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-fubao" id="confirm-btn">确定</button>
+                <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal succ-->
+<div class="modal fade" id="payoffSuccModal" tabindex="-1" role="dialog" aria-labelledby="payoffLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="payoffLabel">申请成功</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="useGrade">
+                <div class="elem-content">
+                    <img src='/images/success_icon.png' class='icon-succ' alt='申请成功'>
+                    <p>申请成功，将于24小时内还款至您的信用卡</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-fubao" id="succ-btn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal fail-->
+<div class="modal fade" id="payoffFailModal" tabindex="-1" role="dialog" aria-labelledby="payoffLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="payoffLabel">申请失败</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="useGrade">
+                <div class="elem-content">
+                    <h3>信用卡还款申请失败</h3>
+                    <p>请检查卡号、姓名、发卡行是否填写有误</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-fubao" id="fail-btn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+ 
     <div class="container">
     <div class="row">
         <hr class="footer-line">
@@ -246,8 +316,6 @@
 <!-- 3.3.7 -->
 <script src='./js/bootstrap.min.js'></script>
     <script src='./js/bootstrap-select.min.js'></script>
-    <script type="text/javascript">
-        $('.selectpicker').selectpicker();
-    </script>
+    <script src="./js/payoffCredit.js"></script>
 </body>
 </html>
